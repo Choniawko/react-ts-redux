@@ -1,9 +1,15 @@
 import React, { Component } from "react";
+import { Route, Switch } from "react-router";
+import PostContainer from "./Post/";
+import CategoryContainer from "./Category/";
 import logo from "./logo.svg";
 import "./App.css";
 
-class App extends Component {
+class App extends Component<any, any> {
   render() {
+    const {
+      history: { push }
+    } = this.props;
     return (
       <div className="App">
         <header className="App-header">
@@ -20,6 +26,12 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <div onClick={() => push("/post")}>Post</div>
+        <div onClick={() => push("/category")}>Category</div>
+        <Switch>
+          <Route exact path="/post" component={PostContainer} />
+          <Route exact path="/category" component={CategoryContainer} />
+        </Switch>
       </div>
     );
   }

@@ -13,7 +13,7 @@ ReactDOM.render(
     <ConnectedRouter history={history}>
       <>
         <Switch>
-          <Route exact path="/" render={() => <App />} />
+          <Route path="/" component={App} />
           <Route render={() => <div>Miss</div>} />
         </Switch>
       </>
