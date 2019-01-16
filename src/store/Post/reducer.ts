@@ -17,14 +17,14 @@ export type State = {
 };
 type Action = ActionType<typeof actionsCreators>;
 
-const initialState: State = {
+export const INITIAL_STATE: State = {
   posts: [],
   count: 0,
   previos: null,
   next: null
 };
 
-export default (state: State = initialState, { type, payload }: Action) => {
+export default (state: State = INITIAL_STATE, { type, payload }: Action) => {
   switch (type) {
     case actionsCreators.updatePosts.type:
       return {

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post reducer updatePosts action 1`] = `
+Object {
+  "count": 0,
+  "next": null,
+  "posts": Array [
+    Object {
+      "active": true,
+      "category": "Category #1",
+      "description": "Description #1",
+      "id": 1,
+      "title": "Post #1",
+    },
+  ],
+  "previos": null,
+}
+`;
